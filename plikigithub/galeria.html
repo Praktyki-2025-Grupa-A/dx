@@ -11,7 +11,7 @@
 <body>
     <header>
         <h1>Jpp photos</h1>
-        <button id="dmode" onclick="motyw()">Tryb Ciemny</button>
+        <button id="dmode" onclick="motyw()">Tryb Ciemny 🌙</button>
     </header>
     <main>
         <section id="left">
@@ -66,11 +66,11 @@
             const main = document.querySelector('main');
             const button = document.getElementById('dmode');
             main.classList.toggle("dark-mode");
-            
+
             if (main.classList.contains("dark-mode")) {
-                button.textContent = "Tryb Jasny"; 
+                button.textContent = "Tryb Jasny ☀️";
             } else {
-                button.textContent = "Tryb Ciemny"; 
+                button.textContent = "Tryb Ciemny 🌙"; 
             }
         }
         
