@@ -11,30 +11,30 @@
 <body>
     <header>
         <h1>Jpp photos</h1>
-        <button id="dmode" onclick="motyw()">Dark mode 🌙</button>
+        <button id="tryb-toggle" onclick="zmienMotyw()">Dark mode 🌙</button>
     </header>
     <main>
-        <section id="left">
-            <button id="back" onclick="poprzednie()">&lt;</button>
+        <section id="lewa-sekcja">
+            <button id="poprzednie" onclick="poprzednieZdjecie()">&lt;</button>
         </section>
-        <section id="mid">
+        <section id="srodkowa-sekcja">
             <img src="1.jpg" alt="Aktywne zdjęcie">
         </section>
-        <section id="right">
-            <button id="next" onclick="nastepne()">&gt;</button>
+        <section id="prawa-sekcja">
+            <button id="nastepne" onclick="nastepneZdjecie()">&gt;</button>
         </section>
     </main>
     <section id="miniatury">
-        <img id="1" src="1.jpg" alt="Gdańsk">
-        <img id="2" src="2.jpg" alt="Kraków">
-        <img id="3" src="3.jpg" alt="Niedzica">
-        <img id="4" src="4.jpg" alt="Pieniny">
-        <img id="5" src="5.jpg" alt="Szklarska Poręba">
-        <img id="6" src="6.jpg" alt="Tatry">
-        <img id="7" src="7.jpg" alt="Wrocław">
-        <img id="8" src="8.jpg" alt="Wągrowiec">
+        <img id="miniatura-1" src="1.jpg" alt="Gdańsk">
+        <img id="miniatura-2" src="2.jpg" alt="Kraków">
+        <img id="miniatura-3" src="3.jpg" alt="Niedzica">
+        <img id="miniatura-4" src="4.jpg" alt="Pieniny">
+        <img id="miniatura-5" src="5.jpg" alt="Szklarska Poręba">
+        <img id="miniatura-6" src="6.jpg" alt="Tatry">
+        <img id="miniatura-7" src="7.jpg" alt="Wrocław">
+        <img id="miniatura-8" src="8.jpg" alt="Wągrowiec">
     </section>
-    <div class="above_footer">
+    <div class="nad-stopka">
         <h1>Dlaczego warto odwiedzić naszą galerię zdjęć? Oto kilka powodów:</h1>
         <div class="paragrafy">
             <p>Setki wyjątkowych fotografii uchwyconych w najpiękniejszych zakątkach Polski,</p>
@@ -50,8 +50,8 @@
     <div class="strefy">
         <h1>Kategorie</h1>
     </div>
-    <div class="container_links">
-        <div class="links_strefy">
+    <div class="kontener-linkow">
+        <div class="linki-strefy">
             <button><a href="#">Pejzaże i krajobrazy</a></button>
             <button><a href="#">Zabytki i architektura</a></button>
             <button><a href="#">Miasta nocą</a></button>
@@ -64,16 +64,16 @@
     </div>
 
     <footer>
-        <div class="container_footer">
-            <div class="footer_info">
+        <div class="kontener-stopki">
+            <div class="stopka-info">
                 <h2>Jpp Photos</h2>
                 <br>
                 <p>Jpp Photos – uchwyć piękno świata w jednym miejscu!</p>
             </div>
-            <div class="footer_info">
+            <div class="stopka-info">
                 <h2>MAPA WITRYNY</h2>
                 <br>
-                <div class="footer_links">
+                <div class="stopka-linki">
                     <li><a href="#">Strona główna</a></li>
                     <li><a href="#">Galeria</a></li>
                     <li><a href="#">Kategorie</a></li>
@@ -84,7 +84,7 @@
                     <li><a href="#">Polityka prywatności</a></li>
                 </div>
             </div>
-            <div class="footer_info">
+            <div class="stopka-info">
                 <h2>INFORMACJE</h2>
                 <br>
                 <p>ul. Fotograficzna 7, 00-123 Warszawa</p>
@@ -92,7 +92,7 @@
                 <p>Poniedziałek - Piątek: 9:00 - 20:00</p>
                 <p>Sobota - Niedziela: 10:00 - 18:00</p>
             </div>
-            <div class="footer_info">
+            <div class="stopka-info">
                 <h2>KONTAKT</h2>
                 <br>
                 <p>📞 tel: +48 123 456 789</p>
@@ -106,14 +106,14 @@
         const liczbazdjec = 8;
 
         function zmienZdjecie(numer) {
-            let img = document.querySelector("#mid img");
+            let img = document.querySelector("#srodkowa-sekcja img");
             img.classList.remove("fade");
             void img.offsetWidth;
             img.classList.add("fade");
             img.src = `${numer}.jpg`;
         }
 
-        function nastepne() {
+        function nastepneZdjecie() {
             wyswietlone++;
             if (wyswietlone > liczbazdjec) {
                 wyswietlone = 1;
@@ -121,7 +121,7 @@
             zmienZdjecie(wyswietlone);
         }
 
-        function poprzednie() {
+        function poprzednieZdjecie() {
             wyswietlone--;
             if (wyswietlone < 1) {
                 wyswietlone = liczbazdjec;
@@ -129,9 +129,9 @@
             zmienZdjecie(wyswietlone);
         }
 
-        function motyw() {
+        function zmienMotyw() {
             const main = document.querySelector('main');
-            const button = document.getElementById('dmode');
+            const button = document.getElementById('tryb-toggle');
             main.classList.toggle("dark-mode");
             button.classList.toggle("dark-mode");
 
