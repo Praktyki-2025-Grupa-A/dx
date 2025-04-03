@@ -32,9 +32,27 @@ button{
     min-width: 100px;
     min-height: 50px;
     cursor: pointer;
+    transition: 0.3s all ease-in-out;
 }
-button:hover{
+#right button:hover{
+    transition: 0.3s all ease-in-out;
+    background-color: black;
+}
+#left button:hover{
     transition: 0.3s all ease-in-out;
     background-color: black;
 }
 #miniatury{display: none;}
+
+.fade {
+    animation: fadeEffect 0.3s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

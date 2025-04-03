@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biuro turystyczne</title>
     <link rel="stylesheet" href="styl.css">
 </head>
+
 <body>
     <header>
         <h1>Jpp photos</h1>
@@ -34,20 +36,31 @@
         let wyswietlone = 1;
         const liczbazdjec = 7;
 
+        function zmienZdjecie(numer) {
+            let img = document.querySelector("#mid img");
+            img.classList.remove("fade");
+            void img.offsetWidth;
+            img.classList.add("fade");
+            img.src = `${numer}.jpg`;
+        }
+
         function nastepne() {
             wyswietlone++;
             if (wyswietlone > liczbazdjec) {
                 wyswietlone = 1;
             }
-            document.querySelector("#mid img").src = `${wyswietlone}.jpg`;
+            zmienZdjecie(wyswietlone);
         }
+
         function poprzednie() {
             wyswietlone--;
             if (wyswietlone < 1) {
                 wyswietlone = liczbazdjec;
             }
-            document.querySelector("#mid img").src = `${wyswietlone}.jpg`;
+            zmienZdjecie(wyswietlone);
         }
+
     </script>
 </body>
+
 </html>
