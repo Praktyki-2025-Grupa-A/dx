@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biuro turystyczne</title>
+    <title>Jpp photos</title>
     <link rel="stylesheet" href="styl.css">
 </head>
 
 <body>
     <header>
         <h1>Jpp photos</h1>
+        <button id="dmode" onclick="motyw()">Tryb Ciemny</button>
     </header>
     <main>
         <section id="left">
@@ -31,10 +32,11 @@
         <img id="5" src="5.jpg" alt="Szklarska Poręba">
         <img id="6" src="6.jpg" alt="Tatry">
         <img id="7" src="7.jpg" alt="Wrocław">
+        <img id="8" src="8.jpg" alt="Wągrowiec">
     </section>
     <script>
         let wyswietlone = 1;
-        const liczbazdjec = 7;
+        const liczbazdjec = 8;
 
         function zmienZdjecie(numer) {
             let img = document.querySelector("#mid img");
@@ -60,7 +62,23 @@
             zmienZdjecie(wyswietlone);
         }
 
+        function motyw() {
+            const main = document.querySelector('main');
+            const button = document.getElementById('dmode');
+            main.classList.toggle("dark-mode");
+            
+            if (main.classList.contains("dark-mode")) {
+                button.textContent = "Tryb Jasny"; 
+            } else {
+                button.textContent = "Tryb Ciemny"; 
+            }
+        }
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            const body = document.body;
+        });
+
     </script>
 </body>
-
 </html>
+
