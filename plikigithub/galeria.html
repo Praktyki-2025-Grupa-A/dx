@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biuro turystyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h1>Zwiedzamy Polskę</h1>
+    </header>
+    <section id="left">
+        <button id="back" onclick="poprzednie()">&lt;</button>
+    </section>
+    <section id="mid">
+        <img src="1.jpg" alt="Aktywne zdjęcie">
+    </section>
+    <section id="right">
+        <button id="next" onclick="nastepne()">&gt;</button>
+    </section>
+    <section id="miniatury">
+        <img id="1" src="1.jpg" alt="Gdańsk">
+        <img id="2" src="2.jpg" alt="Kraków">
+        <img id="3" src="3.jpg" alt="Niedzica">
+        <img id="4" src="4.jpg" alt="Pieniny">
+        <img id="5" src="5.jpg" alt="Szklarska Poręba">
+        <img id="6" src="6.jpg" alt="Tatry">
+        <img id="7" src="7.jpg" alt="Wrocław">
+    </section>
+    <footer>
+        <h3>Autorem galerii jest:</h3>
+        <p>00000000</p>
+        <a href="http://pixabay.com" target="_blank">Więcej zdjęć</a>
+    </footer>
+    <script>
+        let wyswietlone = 1;
+        const liczbazdjec = 7;
+
+        function nastepne() {
+            wyswietlone++;
+            if (wyswietlone > liczbazdjec) {
+                wyswietlone = 1;
+            }
+            document.querySelector("#mid img").src = `${wyswietlone}.jpg`;
+        }
+        function poprzednie() {
+            wyswietlone--;
+            if (wyswietlone < 1) {
+                wyswietlone = liczbazdjec;
+            }
+            document.querySelector("#mid img").src = `${wyswietlone}.jpg`;
+        }
+    </script>
+</body>
+</html>
