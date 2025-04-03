@@ -28,7 +28,7 @@ main {
     min-height: 90vh;
 }
 
-#mid img {
+#srodkowa-sekcja img {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -46,8 +46,8 @@ button {
     display: inline-block;
 }
 
-#right button:hover,
-#left button:hover {
+#prawa-sekcja button:hover,
+#lewa-sekcja button:hover {
     transition: 0.3s all ease-in-out;
     background-color: black;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
@@ -75,18 +75,18 @@ button {
 main {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
-#dmode{
+#tryb-toggle{
     min-width: 150px;
 }
-#dmode:hover{
+#tryb-toggle:hover{
     transition: 0.4s all ease-in-out;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
     background-color: black;
 }
-#dmode.dark-mode{
+#tryb-toggle.dark-mode{
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
 }
-#dmode.dark-mode:hover{
+#tryb-toggle.dark-mode:hover{
     transition: 0.4s all ease-in-out;
     border: none;
     background-color: #bf9f62;
@@ -97,7 +97,7 @@ main {
     color: white;
 }
 
-.above_footer {
+.nad-stopka {
     background-color: #222;
     color: #eee;
     padding: 100px;
@@ -124,7 +124,7 @@ main {
     color: #222;
 }
 
-.container_links {
+.kontener-linkow {
     padding:100px;
     background-color:#222;
     display: flex;
@@ -133,14 +133,14 @@ main {
     gap: 15px;
 }
 
-.links_strefy{
+.linki-strefy{
     display: grid;
     grid-template-columns: repeat(3,20rem);
     grid-template-rows: repeat(2,5rem);
     gap: 35px;
 }
 
-.links_strefy button {
+.linki-strefy button {
     background-color: #bf9f62;
     border: none;
     padding: 12px 20px;
@@ -150,12 +150,12 @@ main {
     transition: 0.3s ease-in-out;
 }
 
-.links_strefy button a {
+.linki-strefy button a {
     text-decoration: none;
     color: white;
 }
 
-.links_strefy button:hover {
+.linki-strefy button:hover {
     background-color: #8b6c3b;
 }
 
@@ -165,28 +165,28 @@ footer {
     padding: 60px 0;
 }
 
-.container_footer {
+.kontener-stopki {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.footer_info {
+.stopka-info {
     max-width: 250px;
 }
 
-.footer_links li {
+.stopka-linki li {
     list-style: none;
     margin: 5px 0;
 }
 
-.footer_links li a {
+.stopka-linki li a {
     text-decoration: none;
     color: #bf9f62;
     transition: 0.3s ease-in-out;
 }
 
-.footer_links li a:hover {
+.stopka-linki li a:hover {
     color: #fff;
     text-decoration: underline;
 }
