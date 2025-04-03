@@ -132,6 +132,9 @@
         function zmienMotyw() {
             const main = document.querySelector('main');
             const button = document.getElementById('tryb-toggle');
+            const zones = document.querySelector('.strefy');
+            
+            zones.classList.toggle("dark-mode");
             main.classList.toggle("dark-mode");
             button.classList.toggle("dark-mode");
 
